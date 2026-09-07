@@ -18,7 +18,7 @@
             theme: {
                 extend: {
                     colors: {
-                        brandRed: '#7A1F1F',    /* Extracted from banner background */
+                        brandRed: 'rgba(113, 21, 24, 1)',
                         brandDark: '#3A0F0F',
                         brandCream: '#F0E5D8',  /* Extracted from banner text */
                         brandGold: '#D4AF37',
@@ -38,12 +38,17 @@
         overflow-x: hidden;
     }
         /* Custom Utilities */
-      .glass-nav {
-        background: rgba(122, 31, 31, 0.95);
+       .glass-nav {
+        background:rgba(113, 21, 24, 1);
         backdrop-filter: blur(10px);
     }
         .hero-overlay {
-            background: linear-gradient(to right, rgba(122, 31, 31, 0.9), rgba(58, 15, 15, 0.7));
+            /* background: linear-gradient(to right, rgba(122, 31, 31, 0.9), rgba(58, 15, 15, 0.7)); */
+            background: linear-gradient(
+  to right,
+  rgba(122, 31, 31, 0.55),
+  rgba(58, 15, 15, 0.35)
+)
         }
         /* Hide scrollbar for clean look */
         ::-webkit-scrollbar { width: 8px; }
@@ -85,14 +90,14 @@
 
     <section id="home" class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=2000&auto=format&fit=crop" alt="Perfume background" class="w-full h-full object-cover" />
+            <img src="hero-banner.jpeg" alt="Perfume background" class="w-full h-full object-cover" />
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         
         <div class="relative z-10 text-center px-4" data-aos="zoom-in" data-aos-duration="1500">
             <p class="text-brandGold text-sm md:text-base uppercase tracking-[0.3em] mb-4">The Art of Attraction</p>
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-brandCream mb-6 leading-tight">
-                Essence of <br> <span class="italic text-brandGold">Elegance</span>
+                 <br> <span class="italic text-brandGold">ATTARE</span>
             </h1>
             <p class="text-brandCream/80 max-w-lg mx-auto text-lg mb-10 font-light">
                 Discover a symphony of rare notes curated for the modern connoisseur. Leave a lingering memory wherever you go.
@@ -113,43 +118,43 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative overflow-hidden bg-white aspect-[3/4] mb-6 flex items-center justify-center shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800&auto=format&fit=crop" alt="Oud & Rose" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="kingmaker.jpeg" alt="Oud & Rose" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-brandDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <button class="bg-brandCream text-brandRed px-6 py-2 uppercase tracking-widest text-xs font-bold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Details</button>
                         </div>
                     </div>
                     <div class="text-center">
-                        <h3 class="text-2xl font-serif text-brandRed mb-2">Midnight Oud</h3>
+                        <h3 class="text-2xl font-serif text-brandRed mb-2">KINGMAKER</h3>
                         <p class="text-sm text-gray-500 mb-2 uppercase tracking-wider">Top Notes: Saffron, Rose</p>
-                        <p class="text-lg font-bold text-brandDark">$140.00</p>
+                        <p class="text-lg font-bold text-brandDark">Rs:2200</p>
                     </div>
                 </div>
 
                 <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
                     <div class="relative overflow-hidden bg-white aspect-[3/4] mb-6 flex items-center justify-center shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=800&auto=format&fit=crop" alt="Citrus Woods" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="belladona.jpeg" alt="Citrus Woods" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-brandDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <button class="bg-brandCream text-brandRed px-6 py-2 uppercase tracking-widest text-xs font-bold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Details</button>
                         </div>
                     </div>
                     <div class="text-center">
-                        <h3 class="text-2xl font-serif text-brandRed mb-2">Velvet Amber</h3>
+                        <h3 class="text-2xl font-serif text-brandRed mb-2">BELLADONA</h3>
                         <p class="text-sm text-gray-500 mb-2 uppercase tracking-wider">Top Notes: Bergamot, Amber</p>
-                        <p class="text-lg font-bold text-brandDark">$125.00</p>
+                        <p class="text-lg font-bold text-brandDark">Rs:2500</p>
                     </div>
                 </div>
 
                 <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="500">
                     <div class="relative overflow-hidden bg-white aspect-[3/4] mb-6 flex items-center justify-center shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?q=80&w=800&auto=format&fit=crop" alt="Floral Musk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <img src="goodbabe.jpeg" alt="Floral Musk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-brandDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <button class="bg-brandCream text-brandRed px-6 py-2 uppercase tracking-widest text-xs font-bold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Details</button>
                         </div>
                     </div>
                     <div class="text-center">
-                        <h3 class="text-2xl font-serif text-brandRed mb-2">Royal Jasmine</h3>
+                        <h3 class="text-2xl font-serif text-brandRed mb-2">GOOD BABE</h3>
                         <p class="text-sm text-gray-500 mb-2 uppercase tracking-wider">Top Notes: Jasmine, Musk</p>
-                        <p class="text-lg font-bold text-brandDark">$160.00</p>
+                        <p class="text-lg font-bold text-brandDark">Rs:3000</p>
                     </div>
                 </div>
             </div>
