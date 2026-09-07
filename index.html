@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attarè | Art of Attraction</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#7A1F1F',    /* Extracted from banner background */
+                        brandDark: '#3A0F0F',
+                        brandCream: '#F0E5D8',  /* Extracted from banner text */
+                        brandGold: '#D4AF37',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        .glass-nav {
+            background: rgba(122, 31, 31, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(122, 31, 31, 0.9), rgba(58, 15, 15, 0.7));
+        }
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F0E5D8; }
+        ::-webkit-scrollbar-thumb { background: #7A1F1F; }
+    </style>
+</head>
+<body class="bg-brandCream text-brandDark font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass-nav border-b border-brandCream/20 transition-all duration-300 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-brandCream hover:text-brandGold transition-colors text-sm uppercase tracking-widest">Home</a>
+                    <a href="#collection" class="text-brandCream hover:text-brandGold transition-colors text-sm uppercase tracking-widest">Collection</a>
+                </div>
+                
+                <div class="flex-shrink-0 flex items-center justify-center cursor-pointer">
+                    <a href="#home" class="font-serif text-3xl text-brandCream tracking-wide flex flex-col items-center">
+                        <span>ATTARÈ</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#reviews" class="text-brandCream hover:text-brandGold transition-colors text-sm uppercase tracking-widest">Reviews</a>
+                    <a href="#contact" class="text-brandCream hover:text-brandGold transition-colors text-sm uppercase tracking-widest border border-brandCream px-4 py-2 hover:bg-brandCream hover:text-brandRed">Contact Us</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button class="text-brandCream hover:text-brandGold focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=2000&auto=format&fit=crop" alt="Perfume background" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4" data-aos="zoom-in" data-aos-duration="1500">
+            <p class="text-brandGold text-sm md:text-base uppercase tracking-[0.3em] mb-4">The Art of Attraction</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-brandCream mb-6 leading-tight">
+                Essence of <br> <span class="italic text-brandGold">Elegance</span>
+            </h1>
+            <p class="text-brandCream/80 max-w-lg mx-auto text-lg mb-10 font-light">
+                Discover a symphony of rare notes curated for the modern connoisseur. Leave a lingering memory wherever you go.
+            </p>
+            <a href="#collection" class="inline-block bg-transparent border border-brandCream text-brandCream px-10 py-4 uppercase tracking-widest text-sm hover:bg-brandCream hover:text-brandRed transition-all duration-300">
+                Discover Collection
+            </a>
+        </div>
+    </section>
+
+    <section id="collection" class="py-24 bg-brandCream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-serif text-brandRed mb-4">Signature Scents</h2>
+                <div class="w-24 h-0.5 bg-brandRed mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden bg-white aspect-[3/4] mb-6 flex items-center justify-center shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=800&auto=format&fit=crop" alt="Oud & Rose" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="bg-brandCream text-brandRed px-6 py-2 uppercase tracking-widest text-xs font-bold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Details</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-serif text-brandRed mb-2">Midnight Oud</h3>
+                        <p class="text-sm text-gray-500 mb-2 uppercase tracking-wider">Top Notes: Saffron, Rose</p>
+                        <p class="text-lg font-bold text-brandDark">$140.00</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden bg-white aspect-[3/4] mb-6 flex items-center justify-center shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=800&auto=format&fit=crop" alt="Citrus Woods" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="bg-brandCream text-brandRed px-6 py-2 uppercase tracking-widest text-xs font-bold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Details</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-serif text-brandRed mb-2">Velvet Amber</h3>
+                        <p class="text-sm text-gray-500 mb-2 uppercase tracking-wider">Top Notes: Bergamot, Amber</p>
+                        <p class="text-lg font-bold text-brandDark">$125.00</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative overflow-hidden bg-white aspect-[3/4] mb-6 flex items-center justify-center shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?q=80&w=800&auto=format&fit=crop" alt="Floral Musk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brandDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button class="bg-brandCream text-brandRed px-6 py-2 uppercase tracking-widest text-xs font-bold transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Details</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-serif text-brandRed mb-2">Royal Jasmine</h3>
+                        <p class="text-sm text-gray-500 mb-2 uppercase tracking-wider">Top Notes: Jasmine, Musk</p>
+                        <p class="text-lg font-bold text-brandDark">$160.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-brandRed text-brandCream">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-in">
+                <h2 class="text-4xl md:text-5xl font-serif mb-4">Whispers of the Elite</h2>
+                <p class="text-brandCream/70 font-light italic">What our clients say</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-brandDark/30 p-10 rounded-sm border border-brandCream/10 relative" data-aos="fade-right">
+                    <span class="text-6xl font-serif text-brandGold absolute top-4 left-4 opacity-20">"</span>
+                    <p class="relative z-10 text-lg leading-relaxed mb-6 font-light">"The Midnight Oud is nothing short of a masterpiece. It lasts all day and leaves an incredible trail. I get stopped in the street constantly."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-brandCream text-brandRed flex items-center justify-center font-bold font-serif text-xl">S</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold tracking-wide">Sarah Jenkins</h4>
+                            <p class="text-xs text-brandGold">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brandDark/30 p-10 rounded-sm border border-brandCream/10 relative" data-aos="fade-left" data-aos-delay="200">
+                    <span class="text-6xl font-serif text-brandGold absolute top-4 left-4 opacity-20">"</span>
+                    <p class="relative z-10 text-lg leading-relaxed mb-6 font-light">"Attarè has completely elevated my fragrance collection. The presentation, the bottle, and most importantly, the scent profile of Velvet Amber is breathtaking."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-brandCream text-brandRed flex items-center justify-center font-bold font-serif text-xl">M</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold tracking-wide">Michael Thorne</h4>
+                            <p class="text-xs text-brandGold">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brandDark text-brandCream pt-20 pb-10 border-t border-brandRed">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 text-center md:text-left">
+                
+                <div data-aos="fade-up">
+                    <h2 class="font-serif text-3xl mb-6">ATTARÈ</h2>
+                    <p class="text-brandCream/70 font-light mb-6">The Art of Attraction.<br>Crafting memories through the finest ingredients gathered from around the world.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-serif text-xl mb-6 text-brandGold">Explore</h3>
+                    <ul class="space-y-3 font-light text-brandCream/70">
+                        <li><a href="#home" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="#collection" class="hover:text-white transition-colors">The Collection</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Gift Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping & Returns</a></li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-serif text-xl mb-6 text-brandGold">Stay Connected</h3>
+                    <p class="text-brandCream/70 font-light mb-4">Join our exclusive mailing list for new releases.</p>
+                    <form class="flex flex-col space-y-3" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Email Address" class="bg-transparent border border-brandCream/30 px-4 py-3 text-brandCream placeholder-brandCream/50 focus:outline-none focus:border-brandGold transition-colors">
+                        <button class="bg-brandCream text-brandRed font-bold uppercase tracking-widest text-sm py-3 hover:bg-brandGold hover:text-white transition-all duration-300">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-center pt-8 border-t border-brandCream/10 text-brandCream/50 text-sm flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2026 Attarè. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed by CodeZ Agency</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true, // Whether animation should happen only once - while scrolling down
+            offset: 100, // Offset (in px) from the original trigger point
+        });
+    </script>
+</body>
+</html>
